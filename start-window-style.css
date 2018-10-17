@@ -1,0 +1,231 @@
+#start-zone {
+	height: 100vh;
+	width: 100%;
+	background: url("background/monotype-bg.jpg") no-repeat center / cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.game-content {
+	width: 1000px;
+	height: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	
+/*	border-radius: 10%;
+	border-left: 10px solid #f2f2f2;
+	border-right: 10px solid #f2f2f2;
+	border-top: 2px solid rgba(224, 235, 235, 0.5);	
+	border-bottom: 2px solid rgba(224, 235, 235, 0.5);*/
+}
+
+.title-wrap {
+	position: relative;
+}
+
+.img-wrap {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 0;
+	/*margin-bottom: 20px;*/
+}
+
+.car-logo {
+	position: absolute;
+	top: 0px;
+	z-index: 0;
+	background-size: 400px 200px;
+	height: 200px;
+	width: 400px;
+	animation: rotation 20s linear infinite;
+}
+
+	@-webkit-keyframes rotation {
+	  0%   { -webkit-transform: rotate(0deg); }
+	  100% { -webkit-transform: rotate(-360deg); }
+	}
+
+	@-moz-keyframes rotation {
+	  0%   { -moz-transform: rotate(0deg); }
+	  100% { -moz-transform: rotate(-360deg); }
+	}
+
+/*.wreath {
+	position: absolute;
+	width: 150px;
+	height: 125px;
+	z-index: 0;
+	opacity: 0.9;
+}*/
+
+.game-content h1 {
+	position: relative;
+	font-family: Verdana, sans-serif;
+	padding: 2px;
+	margin: 3px;
+	color: gold;
+	font-size: 50px;
+	text-shadow: 1px 1px 2px black, 0 0 1em gold;
+	text-transform: uppercase;
+	text-align: center;
+	z-index: 3;
+}
+
+.game-content p {
+	position: relative;
+	font-family: Verdana, sans-serif;
+	padding: 5px;
+	margin: 0px;
+	text-shadow: 1px 1px 2px black, 0 0 1em black;
+	color: white;
+	font-size: 22px;
+	z-index: 3;
+}
+
+.table-wrap {
+	position: relative;
+	margin-top: 20px;
+}
+
+.info-table {
+	position: relative;
+	border-collapse: separate;
+	border-style: solid;
+	border-width: 3px;
+	border-color: goldenrod;
+	padding: 10px;
+	background-color: rgba(128, 128, 128, 0.4);
+	z-index: 2;
+}
+
+#driver-name {
+	font-family: verdana, sans-serif;
+	color: black;
+	text-transform: uppercase;
+	/*font-variant: small-caps;*/
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 0px 0px 1px white;
+}
+
+#get-name {
+	width: 8.5em;
+	font-size: 13px;
+	padding: 6px 0 4px 10px;
+	border: 1px solid #cecece;
+	background: #F6F6f6;
+	border-radius: 8px;
+	text-indent: 0px;
+}
+
+#get-name:focus::placeholder {
+	text-indent: 500px;
+	transition: text-indent 1s ease;
+}
+
+#start-button {
+  display: inline-block;
+  font-family: Trebuchet MS, sans-serif;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  text-shadow: 0px 1px 1px black;
+  /*font-weight: bold;
+  /*width: 30px;*/
+  /*padding: .5em 2em;*/
+  padding: 0.3em 3em;
+  outline: none;
+  border-width: 2px 0;
+  border-style: solid none;
+  border-color: #FDBE33 #000 #D77206;
+  border-radius: 6px;
+  background: linear-gradient(#F3AE0F, #E38916) #E38916;
+  transition: 0.3s;
+}
+
+#start-button:hover { 
+	/*background: linear-gradient(#f5ae00, #f59500) #f5ae00;*/
+	background: linear-gradient(red, yellow);
+}
+
+#start-button:active { 
+	/*background: linear-gradient(#f59500, #f5ae00) #f59500;*/
+	background: linear-gradient(red, yellow);
+}
+
+#artists {
+	position: absolute;
+	/*font-family: Verdana, sans-serif;*/
+	font-family: cambria, sans-serif;
+	font-variant: small-caps;
+	text-shadow: 0px 0px 2px white;
+	top: 0px;
+	color: black;
+	font-size: 22px;
+	font-weight: bold;
+
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	width: 100%;
+	height: 42px;
+	
+/*	border-top: 1px solid rgba(255, 255, 255, 0.5);
+	background-color: rgba(128, 128, 255, 0.8);	*/
+}
+
+#tools {
+	position: absolute;
+	/*font-family: Verdana, sans-serif;*/
+	font-family: cambria, sans-serif;
+	font-variant: small-caps;
+	text-shadow: 0px 0px 2px white;
+	bottom: 0px;
+	color: black;
+	font-size: 22px;
+	font-weight: bold;
+
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	width: 100%;
+	height: 82px;
+}
+
+.tools-wrap {
+	/*position: absolute;*/
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+}
+
+#html {
+	height: 50px;
+	width: 50px;
+}
+
+#css {
+	height: 50px;
+	width: 50px;
+}
+
+#js {
+	height: 50px;
+	width: 50px;
+}
+
+#jq {
+	height: 50px;
+	width: 50px;
+}
+

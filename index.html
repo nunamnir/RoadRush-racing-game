@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Road Rush, the game</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="start-window-style.css">
+	<link rel="stylesheet" type="text/css" href="game-zone.css">
+	<link rel="stylesheet" type="text/css" href="stat-window-style.css">
+	<link rel="stylesheet" type="text/css" href="fontello/css/fontello.css">
+</head>
+<body>
+<section id="start-zone">
+	<header id="artists">
+		<span class="icon-eye">Victor Hunko</span>
+		<span class="icon-user">Oleg Savluchenko</span>
+		<span class="icon-globe">2018</span>
+	</header>
+	<div class="game-content">
+		<div class="img-wrap">
+			<img class="car-logo" src="img/cars/red-sport-car.png">
+		</div>
+		<div class="title-wrap">
+			<h1>
+				Road Rush
+			</h1>
+			<p>
+				The road home is always bonds with danger, especially if you are in a hurry.
+			</p>
+		</div>
+		<div class="table-wrap">
+			<!-- <img class="wreath" src="img/golden-wreath.png"> -->
+			<table class="info-table">
+				<tr>
+					<td id="driver-name">
+						Driver: 
+					</td>
+				</tr>
+				<tr>				
+					<td>
+						<input id="get-name" type="text" placeholder="Incognito">
+					</td>
+				</tr>
+				<tr>		
+					<td>
+						<!-- <input id="submit-button" type="submit" value="Start"> -->
+						<button id="start-button" type="button">
+							Start
+						</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<footer id="tools">
+		<div class="tools-wrap">
+			<img id="html" src="img/tools/html-logo.png" alt="">
+			<span>HTML</span>			
+		</div>
+		<div class="tools-wrap">
+			<img id="css" src="img/tools/css-logo.png" alt="">
+			<span>CSS</span>
+		</div>
+		<div class="tools-wrap">
+			<img id="js" src="img/tools/js-logo.png" alt="">
+			<span>JavaScript</span>
+		</div>
+		<div class="tools-wrap">	
+			<img id="jq" src="img/tools/jquery-logo.png" alt="">
+			<span>jQuery</span>
+		</div>
+	</footer>
+</section>
+<section id="stat-zone">
+	<header id="artists">
+		<span class="icon-eye">Victor Hunko</span>
+		<span class="icon-user">Oleg Savluchenko</span>
+		<span class="icon-globe">2018</span>
+	</header>
+	<div class="crashGlass"></div>
+	<div class="stat-wrap">
+		<div class="stage-1">
+			<div class="stat-box">
+				<img id="champ-cup" src="img/obj/total-score.png">
+				<p id="title-name">
+					Total Score
+				</p>
+				<span id="total-score">
+					0
+				</span>
+			</div>
+		</div>
+		<div class="stage-2">
+			<div class="stat-box">
+				<img id="motor-helm-img" src="img/obj/motor-helm.png">
+				<h2 id="def-text-name">Driver</h2>
+				<h3 id="player-name">Undefined</h3>
+			</div>
+			<div class="stat-box">
+				<img id="road-flags-img" src="img/obj/road-flags.png">
+				<h2 id="def-text-name">Finish</h2>
+				<h3 id="result-stat">Undefined</h3>
+			</div>
+		</div>		
+		<div class="stage-3">				
+			<div class="stat-box">
+				<img id="def-stat-img" src="img/obj/speedometr.png">
+				<p id="small-title-name">
+					Speed
+				</p>
+				<span id="speed-result">
+					0
+				</span>
+			</div>
+			<div class="stat-box">
+				<img id="def-stat-img" src="img/obj/coin.png">
+				<p id="small-title-name">
+					Coin
+				</p>
+				<span id="coin-result">
+					0
+				</span>
+			</div>
+			<div class="stat-box">
+				<img id="def-stat-img" src="img/obj/speed-up.png">
+				<p id="small-title-name">
+					Axel
+				</p>
+				<span id="axel-result">
+					0
+				</span>
+			</div>
+			<div class="stat-box">
+				<img id="def-stat-img" src="img/obj/oil.png">
+				<p id="small-title-name">
+					Oil
+				</p>
+				<span id="oil-result">
+					0
+				</span>
+			</div>
+			<div class="stat-box">
+				<img id="def-stat-img" src="img/obj/wall.png">
+				<p id="small-title-name">
+					Wall
+				</p>
+				<span id="wall-result">
+					0
+				</span>
+			</div>
+		</div>
+	</div>
+	<footer id="button-menu">
+		<div class="stat-box">
+			<button id="restart-game-button" type="button">
+				Restart Game
+			</button>
+		</div>
+		<div class="stat-box">
+			<button id="change-player-button" type="button">
+				Change Driver
+			</button>
+		</div>
+	</footer>
+</section>
+<main id="game-zone">
+	<div class="arrow-up-img-box">
+		<img id="arrow-up-img" src="img/keyb_arrow_up.png" alt="">
+	</div>
+	<div class="game-wrap">
+		<header class="info-wrap">
+			<div class="def-box">
+				<img id="def-img" src="img/obj/speedometr.png" alt="">
+				<h2>
+					Speed
+				</h2>
+				<span id="speed-val">
+					0
+				</span>
+			</div>
+			<div class="def-box">
+				<img id="def-img" src="img/obj/coin.png" alt="">
+				<h2>
+					Coin
+				</h2>
+				<span id="coin-val">
+					0
+				</span>
+			</div>
+			<div class="def-box">
+				<img id="def-img" src="img/obj/speed-up.png" alt="">
+				<h2>
+					Axel
+				</h2>
+				<span id="axel-val">
+					0
+				</span>
+			</div>
+			<div class="def-box">
+				<img id="def-img" src="img/obj/oil.png" alt="">
+				<h2>
+					Oil
+				</h2>
+				<span id="oil-val">
+					0
+				</span>
+			</div>
+			<div class="def-box">
+				<img id="def-img" src="img/obj/wall.png" alt="">
+				<h2>
+					Wall
+				</h2>
+				<span id="wall-val">
+					0
+				</span>
+			</div>
+		</header>
+		<div class="road-wrap">
+			<div id="obj-car"></div>
+			<div class="road">
+				<div class="road-col-0">
+					<div class="def-slot" id="road-col-0-row-0"></div>
+					<div class="def-slot" id="road-col-0-row-1"></div>
+					<div class="def-slot" id="road-col-0-row-2"></div>
+					<div class="def-slot" id="road-col-0-row-3"></div>
+					<div class="def-slot" id="road-col-0-row-4"></div>
+					<div class="def-slot" id="road-col-0-row-5"></div>
+					<div class="def-slot" id="road-col-0-row-6"></div>
+					<div class="def-slot" id="road-col-0-row-7"></div>
+					<div class="def-slot" id="road-col-0-row-8"></div>
+					<div class="def-slot" id="road-col-0-row-9"></div>
+					<div class="def-slot" id="road-col-0-row-10"></div>
+					<div class="def-slot" id="road-col-0-row-11"></div>
+					<div class="def-slot" id="road-col-0-row-12"></div>
+					<div class="def-slot" id="road-col-0-row-13"></div>
+					<div class="def-slot" id="road-col-0-row-14"></div>
+					<div class="def-slot" id="road-col-0-row-15"></div>
+					<div class="def-slot" id="road-col-0-row-16"></div>
+					<div class="def-slot" id="road-col-0-row-17"></div>
+					<div class="def-slot" id="road-col-0-row-18"></div>
+					<div class="def-slot" id="road-col-0-row-19"></div>
+				</div>
+				<div class="road-col-1">
+					<div class="def-slot" id="road-col-1-row-0"></div>
+					<div class="def-slot" id="road-col-1-row-1"></div>
+					<div class="def-slot" id="road-col-1-row-2"></div>
+					<div class="def-slot" id="road-col-1-row-3"></div>
+					<div class="def-slot" id="road-col-1-row-4"></div>
+					<div class="def-slot" id="road-col-1-row-5"></div>
+					<div class="def-slot" id="road-col-1-row-6"></div>
+					<div class="def-slot" id="road-col-1-row-7"></div>
+					<div class="def-slot" id="road-col-1-row-8"></div>
+					<div class="def-slot" id="road-col-1-row-9"></div>
+					<div class="def-slot" id="road-col-1-row-10"></div>
+					<div class="def-slot" id="road-col-1-row-11"></div>
+					<div class="def-slot" id="road-col-1-row-12"></div>
+					<div class="def-slot" id="road-col-1-row-13"></div>
+					<div class="def-slot" id="road-col-1-row-14"></div>
+					<div class="def-slot" id="road-col-1-row-15"></div>
+					<div class="def-slot" id="road-col-1-row-16"></div>
+					<div class="def-slot" id="road-col-1-row-17"></div>
+					<div class="def-slot" id="road-col-1-row-18"></div>
+					<div class="def-slot" id="road-col-1-row-19"></div>	
+				</div>
+				<div class="road-col-2">			
+					<div class="def-slot" id="road-col-2-row-0"></div>
+					<div class="def-slot" id="road-col-2-row-1"></div>
+					<div class="def-slot" id="road-col-2-row-2"></div>
+					<div class="def-slot" id="road-col-2-row-3"></div>
+					<div class="def-slot" id="road-col-2-row-4"></div>
+					<div class="def-slot" id="road-col-2-row-5"></div>
+					<div class="def-slot" id="road-col-2-row-6"></div>
+					<div class="def-slot" id="road-col-2-row-7"></div>
+					<div class="def-slot" id="road-col-2-row-8"></div>
+					<div class="def-slot" id="road-col-2-row-9"></div>
+					<div class="def-slot" id="road-col-2-row-10"></div>
+					<div class="def-slot" id="road-col-2-row-11"></div>
+					<div class="def-slot" id="road-col-2-row-12"></div>
+					<div class="def-slot" id="road-col-2-row-13"></div>
+					<div class="def-slot" id="road-col-2-row-14"></div>
+					<div class="def-slot" id="road-col-2-row-15"></div>
+					<div class="def-slot" id="road-col-2-row-16"></div>
+					<div class="def-slot" id="road-col-2-row-17"></div>
+					<div class="def-slot" id="road-col-2-row-18"></div>
+					<div class="def-slot" id="road-col-2-row-19"></div>
+				</div>
+				<div class="road-col-3">
+					<div class="def-slot" id="road-col-3-row-0"></div>	
+					<div class="def-slot" id="road-col-3-row-1"></div>
+					<div class="def-slot" id="road-col-3-row-2"></div>
+					<div class="def-slot" id="road-col-3-row-3"></div>
+					<div class="def-slot" id="road-col-3-row-4"></div>
+					<div class="def-slot" id="road-col-3-row-5"></div>
+					<div class="def-slot" id="road-col-3-row-6"></div>
+					<div class="def-slot" id="road-col-3-row-7"></div>
+					<div class="def-slot" id="road-col-3-row-8"></div>
+					<div class="def-slot" id="road-col-3-row-9"></div>
+					<div class="def-slot" id="road-col-3-row-10"></div>
+					<div class="def-slot" id="road-col-3-row-11"></div>
+					<div class="def-slot" id="road-col-3-row-12"></div>
+					<div class="def-slot" id="road-col-3-row-13"></div>
+					<div class="def-slot" id="road-col-3-row-14"></div>
+					<div class="def-slot" id="road-col-3-row-15"></div>
+					<div class="def-slot" id="road-col-3-row-16"></div>
+					<div class="def-slot" id="road-col-3-row-17"></div>
+					<div class="def-slot" id="road-col-3-row-18"></div>
+					<div class="def-slot" id="road-col-3-row-19"></div>	
+				</div>
+			</div>
+		</div>
+		<div id="timer"></div>
+	</div>
+	<div class="arrow-down-img-box">
+		<img id="arrow-down-img" src="img/keyb_arrow_down.png" alt="">
+	</div>
+	<div class="crashGlass"></div>
+</main>
+<script src="road-rush-core.js"></script>
+</body>
+</html>

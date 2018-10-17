@@ -1,0 +1,218 @@
+#stat-zone {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+
+	display: none;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	background: url("background/monotype-bg.jpg") no-repeat center / cover;
+}
+
+.stat-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /*background: url("background/finish-flag.png") no-repeat center / cover;*/
+}
+
+.stage-1, .stage-2, .stage-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  margin: 40px;
+}
+
+.stat-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 50px 0 50px;
+  height: 70px;
+  width: 85px;
+}
+
+#motor-helm-img {
+  background-size: 75px 75px;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 75px;
+  width: 75px;
+}
+
+#road-flags-img {
+  background-size: 75px 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 75px;
+  width: 100px;
+}
+
+#def-stat-img {
+  background-size: 50px 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 50px;
+}
+
+#def-text-name {
+  font-size: 16px;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px black, 0 0 1em black;
+  margin: 5px;
+}
+
+#player-name {
+  font-family: cambria, sans-serif;
+  font-size: 22px;
+  font-variant: small-caps;
+  color: #ffcc00;
+  text-shadow: 1px 1px 2px black, 0 0 1em black;
+  letter-spacing: 2px;
+}
+
+#result-stat {
+  font-family: cambria, sans-serif;
+  font-size: 22px;
+  font-variant: small-caps;
+  color: #ffcc00;
+  text-shadow: 1px 1px 2px black, 0 0 1em black;
+  letter-spacing: 2px;
+}
+
+#champ-cup {
+  background-size: 75px 75px;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 75;
+  width: 75px;
+}
+
+#title-name {
+  white-space: nowrap;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px black, 0 0 1em black;
+  margin: 5px;
+}
+
+#small-title-name {
+  white-space: nowrap;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px black, 0 0 1em black;
+  margin: 5px;
+}
+
+#speed-result, #coin-result, #axel-result, 
+#oil-result, #wall-result {
+  font-family: cambria, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffcc00;
+  text-shadow: 1px 1px 2px black, 0 0 1em black;
+  transition: all 0.5s linear;
+}
+
+#total-score {
+  font-family: cambria, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffcc00;
+  text-shadow: 1px 1px 2px black, 0 0 1em black;
+  transition: all 0.5s linear;
+}
+
+#button-menu {
+  position: absolute;
+  /*font-family: Verdana, sans-serif;*/
+  font-family: cambria, sans-serif;
+  font-variant: small-caps;
+  text-shadow: 0px 0px 2px white;
+  bottom: 0px;
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 100%;
+  height: 84px;
+/*  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: rgba(128, 128, 255, 0.8); */
+}
+
+#restart-game-button {
+	cursor: pointer;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  text-shadow: 0px 1px 1px black;
+  /*font-weight: bold;
+  /*width: 30px;*/
+  /*padding: .5em 2em;*/
+  padding: 0.3em 3em;
+  outline: none;
+  border-width: 2px 0;
+  border-style: solid none;
+  border-color: #FDBE33 #000 #D77206;
+  border-radius: 6px;
+  background: linear-gradient(#F3AE0F, #E38916) #E38916;
+  /*background: linear-gradient(red, yellow);*/
+  transition: 0.3s;
+}
+
+#restart-game-button:hover {
+	/*background: linear-gradient(#f5ae00, #f59500) #f5ae00;*/
+  background: linear-gradient(red, yellow);
+}
+
+#restart-game-button:active {
+	/*background: linear-gradient(#f59500, #f5ae00) #f59500;*/
+  background: linear-gradient(red, yellow);
+}
+
+#change-player-button {
+	cursor: pointer;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  text-shadow: 0px 1px 1px black;
+  /*font-weight: bold;
+  /*width: 30px;*/
+  /*padding: .5em 2em;*/
+  padding: 0.3em 3em;
+  outline: none;
+  border-width: 2px 0;
+  border-style: solid none;
+  border-color: #FDBE33 #000 #D77206;
+  border-radius: 6px;
+  background: linear-gradient(#F3AE0F, #E38916) #E38916;
+  /*background: linear-gradient(red, yellow);*/
+  transition: 0.3s;
+}
+
+#change-player-button:hover {
+	/*background: linear-gradient(#f5ae00, #f59500) #f5ae00;*/
+  background: linear-gradient(red, yellow);
+}
+
+#change-player-button:active {
+	/*background: linear-gradient(#f59500, #f5ae00) #f59500;*/
+  background: linear-gradient(red, yellow);
+}
