@@ -439,11 +439,11 @@ function useGameWindow() {
 
 	function getRandom() {
 		var num = Math.random();
-		if(num < 0.80) return 0; 			// вероятность 80%
-		else if(num < 0.85) return 1; // вероятность 5%
+		if(num < 0.60) return 0; 			// вероятность 60%
+		else if(num < 0.85) return 1; // вероятность 35%
 		else if(num < 0.90) return 2; // вероятность 5%
 		else if(num < 0.95) return 3; // вероятность 5%
-		else return 4; 								// вероятность 5%
+		else return 4;							// вероятность 5%
 	}
 
 	function getStepNum() {
